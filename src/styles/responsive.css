@@ -1,0 +1,154 @@
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar .navbar-nav {
+      display: none;
+    }
+    
+    
+    .navbar-toggler {
+      display: block;
+    }
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 2;
+      width: 50%;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    .banner-desc {
+      transform: none;
+    }
+    .banner-text h1 {
+      width: fit-content;
+      text-align: center;
+      font-size: 60px;
+      line-height: 74px;
+    }
+    .mobile-menu {
+      top: 56px;
+    }  
+    .mobile-menu-content {
+      padding: 0;
+    }
+
+  .banner-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  }
+
+  
+  @media (min-width: 992px) {
+    .navbar-toggler {
+      display: none;
+    }
+    
+    .mobile-menu {
+      display: none;
+    }
+
+  }
+
+  
+  @media (max-width: 768px) {
+    .banner-text h1 {
+      line-height: 60px;
+    }
+    .banner-wrapper {
+      background-image: url(../assets/banner-small.png) !important;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 10;
+      height: 75vh;
+    }
+    .cta-area {
+      width: auto;
+    }
+    .image-1 {
+      height: 300px;
+  }
+  iframe {
+    width: 500px;
+  }
+  .continue-btn {
+    width: 260px;
+  }
+  }
+  
+  @media (max-width: 525px) {
+    .navbar {
+      padding: 10px 12px !important;
+    }
+    .nav-main {
+      padding: 0;
+    }
+    .banner-text h1 {
+      line-height: 42px;
+  }
+    .banner-text h1 {
+      font-size: 40px;
+    }
+    .banner-text button {
+      width: 200px; 
+    }
+    .content-section button {
+      width: 200px; 
+    }
+    .toy-img {
+      height: 340px;
+  }
+  .cta-area button {
+    width: 200px;
+  }
+  .banner-text {
+    padding: 20px;
+  }
+  .cta-area {
+    padding: 35px;
+  }
+  iframe {
+    width: 300px;
+  }
+    .continue-btn {
+    width: 250px;
+  }
+  .checkout-container {
+    flex-direction: column;
+  }
+  .discount-box {
+    flex-direction: column;
+  }
+  
+
+  }
+  
+  @media (max-width: 376px) {
+    .navbar-logo {
+      width: 100px;
+      height: auto;
+  }
+  .get-barkbox-btn {
+    padding: 8px 5px;
+  }
+  .navbar-toggler {
+    padding: 0;
+  }
+
+  iframe {
+    width: 250px;
+  }
+    .continue-btn {
+    width: 240px;
+  }
+
+  }

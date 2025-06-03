@@ -1,0 +1,52 @@
+/* Custom styles to enhance Bootstrap */
+.login-tabs .nav-link {
+  border: none;
+  border-radius: 0;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 0;
+}
+
+.login-tabs .nav-link.active {
+  color: #000;
+  background-color: transparent;
+}
+
+.login-card {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Custom color for the BARK logo */
+.text-info {
+  color: var(--theme-color-sky) !important;
+}
+
+/* Override Bootstrap primary color to match your design */
+
+
+
+/* Password field background */
+.password-bg {
+  background-color: #EBF5FF !important;
+}
+
+.login-p {
+    color: var(--theme-color-dark) !important;
+    background-color: transparent;
+    border: 2px solid var(--theme-color-dark);
+}
+
+.login-p:hover {
+    color: #fff !important;
+}
+
+.login-logo img{
+    height: 50px;
+    width: auto;
+}
+
+.login-card-body .theme_btn {
+    margin: 0;
+}
