@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import NavbarLogo from "../assets/BhauBox-logo.svg";
+import NavbarLogo from "../assets/bhau-box-logo.svg";
 import '../styles/navbar.css';
 
 function Navbar() {
