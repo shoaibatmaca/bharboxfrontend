@@ -183,10 +183,20 @@ const BarkBoxDashboard = () => {
       </div>
 
       <div className="container py-4">
-        <div className="welcome-section mb-4">
+        {/* <div className="welcome-section mb-4">
           <h1 className="theme-title">Welcome back! 🐕</h1>
           <p className="welcome-subtitle">Manage Buddy's subscription and see what's coming next</p>
-        </div>
+        
+        </div> */}
+        <div className="welcome-section mb-4">
+  <h1 className="theme-title">
+    Welcome back{subscription?.dog_name ? `, ${subscription.dog_name}` : ''}! 🐕
+  </h1>
+  <p className="welcome-subtitle">
+    Manage {subscription?.dog_name || "your buddy"}'s subscription and see what's coming next
+  </p>
+</div>
+
 
         {/* Stats Cards */}
         <div className="row mb-4">

@@ -21,7 +21,6 @@ function Footer() {
             <h3>OUR PRODUCTS</h3>
             <ul className="list-unstyled footer-links">
               <li><a href="#">BhauBox</a></li>
-              <li><a href="#">Super Chewer</a></li>
               <li><a href="#">Dental</a></li>
               <li><a href="#">Food</a></li>
             </ul>

@@ -7,7 +7,7 @@ function VideoSection() {
           <h2 className="theme-title">THE LEADER IN DOG TOY SAFETY</h2>
           <p>
             Did you know there are no safety standards for dog toys? Don’t
-            worry, we’re fixing that. We put every BARK toy to the test in our
+            worry, we’re fixing that. We put every Bhau toy to the test in our
             state-of-the-art lab to ensure it meets the highest safety
             requirements.
           </p>

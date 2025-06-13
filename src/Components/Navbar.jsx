@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import NavbarLogo from "../assets/BhauBox-logo.svg";
 import '../styles/navbar.css';
-import NavbarLogo from "../assets/barkbox-logo.svg"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,19 +36,16 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/themes">Monthly Themes</a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="/login">Login</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link theme_btn" href="/toy-selector">GET BARKBOX</a>
+                <a className="nav-link theme_btn" href="/toy-selector">GET BhauBox</a>
               </li>
             </ul>
          
           </div>
           <div className="btn-mbl d-lg-none d-md-block">
-                <a className="nav-link theme_btn" href="/toy-selector">GET BARKBOX</a>
+                <a className="nav-link theme_btn" href="/toy-selector">GET BhauBox</a>
           </div>
         </div>
       </nav>
@@ -56,8 +53,7 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <a href="/get-barkbox" className="mobile-menu-item d-md-none">Get BarkBox</a>
-          <a href="/themes" className="mobile-menu-item">Monthly Themes</a>
+          <a href="/get-BhauBox" className="mobile-menu-item d-md-none">Get BhauBox</a>      
           <a href="/gifts" className="mobile-menu-item">Gifts</a>
           <a className="mobile-menu-item" href="/help">
             Get help <i className="bi bi-chat-dots-fill chat-icon"></i>
@@ -65,7 +61,7 @@ function Navbar() {
           <a href="/login" className="mobile-menu-item">Login</a>
           {/* <div className="mobile-menu-separator"></div>
           <h6 className="mobile-menu-subtitle">MORE FROM BARK</h6>
-          <a href="/barkbox" className="mobile-menu-item">BarkBox</a> */}
+          <a href="/BhauBox" className="mobile-menu-item">BhauBox</a> */}
         </div>
       </div>
     </div>

@@ -1,13 +1,12 @@
-import React from "react";
 import ChatUs from './ChatUs';
 import ContentContainer from './ContentSec';
 import Cta from './Cta';
 import Faqs from './Faqs';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import Newsletter from './Newsletter';
 import Testimonial from './Testimonial';
 import VideoSection from './VideoSection';
-import Newsletter from './Newsletter';
 
 function Landing() {
   return (
@@ -21,7 +20,7 @@ function Landing() {
               <div className="col-lg-4 banner-desc">
                 <div className="banner-text">
                   <h1>DOG JOY, DELIVERED EVERY MONTH</h1>
-                  <button className="theme_btn">Get BarkBox</button>
+                  <button className="theme_btn">Get BhauBox</button>
                 </div>
               </div>
               <div className="col-lg-8"></div>
