@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSiteData } from '../context/SiteDataContext'; // ✅ context import
-
+import { useSiteData } from '../context/SiteDataContext';
 function DogIdentityStep() {
   const [dogName, setDogName] = useState('');
   const [gender, setGender] = useState('');
   const navigate = useNavigate();
-  const { updateSiteData } = useSiteData(); // ✅ context hook
+  const { updateSiteData } = useSiteData(); 
 
   const handleContinue = () => {
     if (dogName && gender) {
-      updateSiteData("dog", { name: dogName, gender }); // ✅ context update
+      updateSiteData("dog", { name: dogName, gender }); 
       navigate('/dog-size-selector', { state: { dogName, gender } });
     }
   };

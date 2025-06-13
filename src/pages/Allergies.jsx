@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSiteData } from '../context/SiteDataContext'; // ✅ context import
+import { useSiteData } from '../context/SiteDataContext';
 
 function Allergies() {
   const [preferences, setPreferences] = useState([]);
   const navigate = useNavigate();
-  const { updateSiteData } = useSiteData(); // ✅ use context
+  const { updateSiteData } = useSiteData();
 
   const options = ['Chicken', 'Turkey', 'Beef', 'None'];
 
@@ -21,7 +21,7 @@ function Allergies() {
   };
 
   const handleContinue = () => {
-    updateSiteData("dog", { allergies: preferences }); // ✅ context update
+    updateSiteData("dog", { allergies: preferences }); 
     navigate('/dog-image-upload', { state: { restrictions: preferences } });
   };
 

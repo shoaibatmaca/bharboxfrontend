@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { sendEmail } from '../utils/sendEmail'; // 👈 import at the top
+import { sendEmail } from '../utils/sendEmail';
 
 function CheckoutPage() {
   const location = useLocation();

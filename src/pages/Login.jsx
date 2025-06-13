@@ -56,14 +56,14 @@ const AuthTabs = () => {
                   LOGIN
                 </button>
               </li>
-              <li className="nav-item w-50">
+              {/* <li className="nav-item w-50">
                 <button
                   className={`nav-link w-100 ${activeTab === 'signup' ? 'active fw-medium border-bottom border-dark border-2' : 'text-secondary'}`}
                   onClick={() => setActiveTab('signup')}
                 >
                   SIGN UP
                 </button>
-              </li>
+              </li> */}
             </ul>
 
             {/* Form */}
@@ -113,7 +113,7 @@ const AuthTabs = () => {
                 </>
               )}
 
-              {activeTab === 'signup' && (
+              {/* {activeTab === 'signup' && (
                 <>
                   <div className="text-center mb-3 small text-secondary">
                     By signing up, you agree to our <a href="#" className="text-primary">terms of service</a> and <a href="#" className="text-primary">privacy policy</a>.
@@ -123,7 +123,8 @@ const AuthTabs = () => {
                     Sign Up
                   </button>
                 </>
-              )}
+              )} */}
+              
             </div>
           </div>
         </div>
