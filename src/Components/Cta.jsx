@@ -1,7 +1,6 @@
-import React from "react";
-import imageOne from '../assets/image-1.png'
-import imageTwo from '../assets/image-2.png'
-import imageThree from '../assets/image-3.png'
+import imageOne from '../assets/image-1.png';
+import imageTwo from '../assets/image-2.png';
+import imageThree from '../assets/image-3.png';
 
 function Cta() {
 return (
@@ -13,7 +12,7 @@ return (
             We believe dog happiness is serious business. Here's how we deliver
             it right to your door, every month.
         </p>
-        <button className="theme_btn">Get BarkBox</button>
+        <button className="theme_btn">Get BhauBox</button>
         </div>
     </div>
 
@@ -94,7 +93,7 @@ return (
         </div>
       </div>
       <div className="cta-area">
-      <button className="theme_btn mx-auto">Get BarkBox</button>
+      <button className="theme_btn mx-auto">Get BhauBox</button>
       </div>
 
     </div>

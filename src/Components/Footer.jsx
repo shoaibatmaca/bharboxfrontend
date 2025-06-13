@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -7,7 +6,7 @@ function Footer() {
       <div className="container">
         <div className="row footer-content">
           <div className="col-lg-4 footer-section mb-4">
-            <h3>ABOUT BARK</h3>
+            <h3>ABOUT Bhau</h3>
             <ul className="list-unstyled footer-links">
               <li><a href="#">Our Story</a></li>
               <li><a href="#">Careers</a></li>
@@ -21,7 +20,7 @@ function Footer() {
           <div className="col-lg-4 footer-section mb-4">
             <h3>OUR PRODUCTS</h3>
             <ul className="list-unstyled footer-links">
-              <li><a href="#">BarkBox</a></li>
+              <li><a href="#">BhauBox</a></li>
               <li><a href="#">Super Chewer</a></li>
               <li><a href="#">Dental</a></li>
               <li><a href="#">Food</a></li>
@@ -44,7 +43,7 @@ function Footer() {
 
         <div className="row footer-bottom text-center text-md-start">
           <div className="col-md-6 mb-3 mb-md-0">
-            <p className="mb-0">©2025 BarkBox. All rights reserved.</p>
+            <p className="mb-0">©2025 BhauBox. All rights reserved.</p>
           </div>
           <div className="col-md-6 text-md-end footer-policies d-flex flex-wrap gap-3 justify-content-center justify-content-md-end">
             <a href="#">Privacy Policy</a>

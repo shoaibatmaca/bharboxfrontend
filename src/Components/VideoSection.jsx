@@ -1,4 +1,3 @@
-import React from "react";
 
 function VideoSection() {
   return (
@@ -12,7 +11,7 @@ function VideoSection() {
             state-of-the-art lab to ensure it meets the highest safety
             requirements.
           </p>
-          <button className="theme_btn">Get BarkBox</button>
+          <button className="theme_btn">Get BhauBox</button>
 
           {/* embedded YouTube video */}
           <div className="mt-5">

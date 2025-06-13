@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import imageOne from '../assets/testimonial-img1.png'
-import imageTwo from '../assets/testimonial-img2.png'
-import imageThree from '../assets/testimonil-img3.png'
+import { useEffect, useRef } from "react";
+import imageOne from '../assets/testimonial-img1.png';
+import imageTwo from '../assets/testimonial-img2.png';
+import imageThree from '../assets/testimonil-img3.png';
 // Assuming you'll add two more images - use placeholders for now
 const imageFour = imageOne; // Replace with your fourth image
 const imageFive = imageTwo; // Replace with your fifth image
@@ -213,7 +213,7 @@ function Testimonial() {
 
       <div className="cta-area">
         <button className="theme_btn">
-          Get BarkBox
+          Get BhauBox
         </button>
       </div>
 

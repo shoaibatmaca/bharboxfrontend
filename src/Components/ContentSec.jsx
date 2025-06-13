@@ -1,8 +1,7 @@
-import React from "react";
-import toyOne from '../assets/toy1.jpg'
-import toytwo from '../assets/toy2.jpeg'
-import titleImg from '../assets/title-img.jpeg'
-import toysNew from '../assets/2x-toys.gif'
+import toysNew from '../assets/2x-toys.gif';
+import titleImg from '../assets/title-img.jpeg';
+import toyOne from '../assets/toy1.jpg';
+import toytwo from '../assets/toy2.jpeg';
 
 function ContentSec() {
   return (
@@ -11,7 +10,7 @@ function ContentSec() {
         <div className="col-lg-12">
           <div className="title">
             <h2 className="theme-title text-center py-3">
-              WHAT'S IN A BARKBOX?
+              WHAT'S IN A BHAUBOX?
             </h2>
           </div>
         </div>
@@ -36,7 +35,7 @@ function ContentSec() {
 
         <div className="get-button my-5">
           <button className="theme_btn mx-auto">
-            Get Barkbox
+            Get Bhaubox
           </button>
         </div>
 
