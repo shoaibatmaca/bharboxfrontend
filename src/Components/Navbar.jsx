@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavbarLogo from "../assets/bhau-box-logo.svg";
 import '../styles/navbar.css';
+import PetChatBot from './PetChatBot';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +32,11 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/petchat">
-                Get help <i className="bi bi-chat-dots-fill chat-icon">
+                <div className="nav-link" style={{ cursor: 'pointer' }}>
+  Get help <i className="bi bi-chat-dots-fill chat-icon"></i>
+  <PetChatBot />
+</div>
 
-                </i>
-                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/login">Login</a>
