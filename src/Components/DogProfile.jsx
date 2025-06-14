@@ -8,7 +8,7 @@ const API_URL = process.env.REACT_APP_API_URL
       const token = localStorage.getItem('access'); // or wherever your JWT is stored
 
       try {
-        const res = await fetch('${API_URL}/api/dog/profile/', {
+        const res = await fetch(`${API_URL}/api/dog/profile/`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
