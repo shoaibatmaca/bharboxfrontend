@@ -172,11 +172,7 @@ fetchDogProfile();
       </div>
 
       <div className="container py-4">
-        {/* <div className="welcome-section mb-4">
-          <h1 className="theme-title">Welcome back! 🐕</h1>
-          <p className="welcome-subtitle">Manage Buddy's subscription and see what's coming next</p>
         
-        </div> */}
 
           <h1 className="theme-title">
   Welcome back{dogName ? `, ${dogName}` : ''}! 🐕
