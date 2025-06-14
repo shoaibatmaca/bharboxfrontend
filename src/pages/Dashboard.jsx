@@ -189,21 +189,21 @@ fetchDogProfile();
           <div className="col-lg-3 col-md-6 mb-3">
             <div className="stat-card animate-bottom">
               <div className="stat-icon boxes"><i className="bi bi-box icon-bounce"></i></div>
-              <div className="stat-number">12</div>
+              <div className="stat-number">{subscription?.total_boxes_delivered ?? 0}</div>
               <div className="stat-label">Boxes Delivered</div>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 mb-3">
             <div className="stat-card animate-bottom">
               <div className="stat-icon toys"><i className="bi bi-heart icon-bounce"></i></div>
-              <div className="stat-number">0</div>
+              <div className="stat-number">{subscription?.total_toys_delivered ?? 0}</div>
               <div className="stat-label">Toys Loved</div>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 mb-3">
             <div className="stat-card animate-bottom">
               <div className="stat-icon treats"><i className="bi bi-gift icon-bounce"></i></div>
-              <div className="stat-number">0</div>
+              <div className="stat-number">{subscription?.total_treats_delivered ?? 0}</div>
               <div className="stat-label">Treats Enjoyed</div>
             </div>
           </div>
