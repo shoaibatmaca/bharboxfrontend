@@ -31,8 +31,10 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/help">
-                Get help <i className="bi bi-chat-dots-fill chat-icon"></i>
+                <a className="nav-link" href="/petchat">
+                Get help <i className="bi bi-chat-dots-fill chat-icon">
+
+                </i>
                 </a>
               </li>
               <li className="nav-item">
