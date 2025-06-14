@@ -346,6 +346,10 @@ const BarkBoxDashboard = () => {
                       <span className="detail-label">Dog Size:</span>
                       <span className="detail-value">{subscription.dog_size}</span>
                     </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Remaining Months:</span>
+                      <span className="detail-value">{subscription.remaining_months}</span>
+                    </div>
                   </div>
                 ) : (
                   <p>Loading subscription details...</p>
