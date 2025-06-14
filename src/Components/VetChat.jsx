@@ -21,7 +21,7 @@ const VetChat = () => {
       {/* Left Panel - Available Services */}
 
       {/* Right Panel - Chat Interface */}
-      <div className="chat-panel animate-right">
+      {/* <div className="chat-panel animate-right"> */}
         {/* Chat Header */}
         <div className="chat-header">
           <div className="vet-info">
@@ -60,7 +60,7 @@ const VetChat = () => {
             </svg>
           </button>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
