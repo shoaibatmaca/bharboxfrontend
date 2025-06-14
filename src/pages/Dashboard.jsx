@@ -316,104 +316,210 @@ const BarkBoxDashboard = () => {
     }
   };
 
-  const renderTabContent = () => {
-    if (activeTab === 'subscription') {
-      return (
-        <div className="row">
-          <div className="col-lg-6 mb-4">
-            <div className="card h-100 animate-left">
-              <div className="card-body">
-                <div className="d-flex justify-content-between align-items-center mb-3">
-                  <h5 className="card-title mb-0">Current Subscription</h5>
-                  <span className="badge bg-success">Active</span>
-                </div>
+  // const renderTabContent = () => {
+  //   if (activeTab === 'subscription') {
+  //     return (
+  //       <div className="row">
+  //         <div className="col-lg-6 mb-4">
+  //           <div className="card h-100 animate-left">
+  //             <div className="card-body">
+  //               <div className="d-flex justify-content-between align-items-center mb-3">
+  //                 <h5 className="card-title mb-0">Current Subscription</h5>
+  //                 <span className="badge bg-success">Active</span>
+  //               </div>
 
-                {subscription ? (
-                  <div className="subscription-details">
-                    <div className="detail-row">
-                      <span className="detail-label">Plan:</span>
-                      <span className="detail-value">{subscription.plan}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Price:</span>
-                      <span className="detail-value">{subscription.price}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Next Billing:</span>
-                      <span className="detail-value">{subscription.next_billing}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Dog Size:</span>
-                      <span className="detail-value">{subscription.dog_size}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Remaining Months:</span>
-                      <span className="detail-value">{subscription.remaining_months}</span>
-                    </div>
-                  </div>
-                ) : (
-                  <p>Loading subscription details...</p>
-                )}
+  //               {subscription ? (
+  //                 <div className="subscription-details">
+  //                   <div className="detail-row">
+  //                     <span className="detail-label">Plan:</span>
+  //                     <span className="detail-value">{subscription.plan}</span>
+  //                   </div>
+  //                   <div className="detail-row">
+  //                     <span className="detail-label">Price:</span>
+  //                     <span className="detail-value">{subscription.price}</span>
+  //                   </div>
+  //                   <div className="detail-row">
+  //                     <span className="detail-label">Next Billing:</span>
+  //                     <span className="detail-value">{subscription.next_billing}</span>
+  //                   </div>
+  //                   <div className="detail-row">
+  //                     <span className="detail-label">Dog Size:</span>
+  //                     <span className="detail-value">{subscription.dog_size}</span>
+  //                   </div>
+  //                   <div className="detail-row">
+  //                     <span className="detail-label">Remaining Months:</span>
+  //                     <span className="detail-value">{subscription.remaining_months}</span>
+  //                   </div>
+  //                 </div>
+  //               ) : (
+  //                 <p>Loading subscription details...</p>
+  //               )}
 
-                <div className="subscription-actions mt-4">
-                  <button className="btn btn-outline-secondary btn-sm me-2">
-                    <i className="bi bi-pause-fill"></i> Pause Subscription
-                  </button>
-                  <button className="btn btn-outline-secondary btn-sm" onClick={handleSkip}>
-                    <i className="bi bi-skip-forward-fill"></i> Skip Next Box
-                  </button>
-                </div>
+  //               <div className="subscription-actions mt-4">
+  //                 <button className="btn btn-outline-secondary btn-sm me-2">
+  //                   <i className="bi bi-pause-fill"></i> Pause Subscription
+  //                 </button>
+  //                 <button className="btn btn-outline-secondary btn-sm" onClick={handleSkip}>
+  //                   <i className="bi bi-skip-forward-fill"></i> Skip Next Box
+  //                 </button>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+
+  //         {/* Next Box Preview */}
+  //         <div className="col-lg-6 mb-4">
+  //           <div className="card h-100">
+  //             <div className="card-body animate-right">
+  //               <h5 className="card-title mb-3">Next Box Preview</h5>
+  //               {subscription?.next_box ? (
+  //                 <>
+  //                   <p className="text-muted mb-3">
+  //                     {subscription.next_box.month_name} {subscription.next_box.year} - "{subscription.next_box.theme}"
+  //                   </p>
+  //                   <div className="box-preview-image mb-3">
+  //                     <div className="preview-placeholder">
+  //                       <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
+  //                     </div>
+  //                   </div>
+
+  //                   <div className="box-contents">
+  //                     <div className="content-item">
+  //                       <i className="bi bi-box text-primary"></i>
+  //                       <span>2 Adventure-themed toys</span>
+  //                     </div>
+  //                     <div className="content-item">
+  //                       <i className="bi bi-heart text-danger"></i>
+  //                       <span>2 All-natural treat bags</span>
+  //                     </div>
+  //                     <div className="content-item">
+  //                       <i className="bi bi-truck text-success"></i>
+  //                       <span>Ships {subscription.next_box.ship_date}</span>
+  //                     </div>
+  //                   </div>
+  //                 </>
+  //               ) : (
+  //                 <p className="text-muted">Currently unavailable</p>
+  //               )}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+
+  //   if (activeTab === 'my-boxes') return <Boxes />;
+  //   if (activeTab === 'dog-profile') return <DogProfile />;
+  //   if (activeTab === 'vet-chat') return <VetChat />;
+  //   if (activeTab === 'account') return <Account />;
+  //   return null;
+  // };
+const renderTabContent = () => {
+  if (activeTab === 'subscription') {
+    return (
+      <div className="row">
+        <div className="col-lg-6 mb-4">
+          <div className="card h-100 animate-left">
+            <div className="card-body">
+              <div className="d-flex justify-content-between align-items-center mb-3">
+                <h5 className="card-title mb-0">Current Subscription</h5>
+                <span className="badge bg-success">Active</span>
               </div>
-            </div>
-          </div>
 
-          {/* Next Box Preview */}
-          <div className="col-lg-6 mb-4">
-            <div className="card h-100">
-              <div className="card-body animate-right">
-                <h5 className="card-title mb-3">Next Box Preview</h5>
-                {subscription?.next_box ? (
-                  <>
-                    <p className="text-muted mb-3">
-                      {subscription.next_box.month_name} {subscription.next_box.year} - "{subscription.next_box.theme}"
-                    </p>
-                    <div className="box-preview-image mb-3">
-                      <div className="preview-placeholder">
-                        <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
-                      </div>
-                    </div>
+              {subscription ? (
+                <div className="subscription-details">
+                  <div className="detail-row">
+                    <span className="detail-label">Plan:</span>
+                    <span className="detail-value">{subscription.plan}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Price:</span>
+                    <span className="detail-value">{subscription.price}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Next Billing:</span>
+                    <span className="detail-value">{subscription.next_billing}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Dog Size:</span>
+                    <span className="detail-value">{subscription.dog_size}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Boxes Delivered:</span>
+                    <span className="detail-value">{subscription.total_boxes_delivered}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Toys Loved:</span>
+                    <span className="detail-value">{subscription.total_toys_delivered}</span>
+                  </div>
+                  <div className="detail-row">
+                    <span className="detail-label">Treats Enjoyed:</span>
+                    <span className="detail-value">{subscription.total_treats_delivered}</span>
+                  </div>
+                </div>
+              ) : (
+                <p>Loading subscription details...</p>
+              )}
 
-                    <div className="box-contents">
-                      <div className="content-item">
-                        <i className="bi bi-box text-primary"></i>
-                        <span>2 Adventure-themed toys</span>
-                      </div>
-                      <div className="content-item">
-                        <i className="bi bi-heart text-danger"></i>
-                        <span>2 All-natural treat bags</span>
-                      </div>
-                      <div className="content-item">
-                        <i className="bi bi-truck text-success"></i>
-                        <span>Ships {subscription.next_box.ship_date}</span>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <p className="text-muted">Currently unavailable</p>
-                )}
+              <div className="subscription-actions mt-4">
+                <button className="btn btn-outline-secondary btn-sm me-2">
+                  <i className="bi bi-pause-fill"></i> Pause Subscription
+                </button>
+                <button className="btn btn-outline-secondary btn-sm" onClick={handleSkip}>
+                  <i className="bi bi-skip-forward-fill"></i> Skip Next Box
+                </button>
               </div>
             </div>
           </div>
         </div>
-      );
-    }
 
-    if (activeTab === 'my-boxes') return <Boxes />;
-    if (activeTab === 'dog-profile') return <DogProfile />;
-    if (activeTab === 'vet-chat') return <VetChat />;
-    if (activeTab === 'account') return <Account />;
-    return null;
-  };
+        {/* Next Box Preview */}
+        <div className="col-lg-6 mb-4">
+          <div className="card h-100">
+            <div className="card-body animate-right">
+              <h5 className="card-title mb-3">Next Box Preview</h5>
+              {subscription?.next_box ? (
+                <>
+                  <p className="text-muted mb-3">
+                    {subscription.next_box.month_name} {subscription.next_box.year} - "{subscription.next_box.theme}"
+                  </p>
+                  <div className="box-preview-image mb-3">
+                    <div className="preview-placeholder">
+                      <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
+                    </div>
+                  </div>
+
+                  <div className="box-contents">
+                    <div className="content-item">
+                      <i className="bi bi-box text-primary"></i>
+                      <span>2 Adventure-themed toys</span>
+                    </div>
+                    <div className="content-item">
+                      <i className="bi bi-heart text-danger"></i>
+                      <span>2 All-natural treat bags</span>
+                    </div>
+                    <div className="content-item">
+                      <i className="bi bi-truck text-success"></i>
+                      <span>Ships {subscription.next_box.ship_date}</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <p className="text-muted">Currently unavailable</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (activeTab === 'my-boxes') return <Boxes />;
+  if (activeTab === 'dog-profile') return <DogProfile />;
+  if (activeTab === 'vet-chat') return <VetChat />;
+  if (activeTab === 'account') return <Account />;
+  return null;
+};
 
   return (
     <div className="barkbox-dashboard">
