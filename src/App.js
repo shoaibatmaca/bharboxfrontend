@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "../src/pages/Home";
 import Login from "../src/pages/Login";
+import PetChatBot from "./Components/PetChatBot";
 import Allergies from "./pages/Allergies";
 import Breed from "./pages/Breed";
 import Checkout from "./pages/Checkout";
@@ -23,6 +24,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/petchat" element={<PetChatBot />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/toy-selector" element={<ToySelector />} />

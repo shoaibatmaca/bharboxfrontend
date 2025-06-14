@@ -5,6 +5,7 @@ import Faqs from '../Components/Faqs';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import Newsletter from '../Components/Newsletter';
+import PetChatBot from '../Components/PetChatBot';
 import Testimonial from '../Components/Testimonial';
 import VideoSection from '../Components/VideoSection';
 
@@ -33,6 +34,7 @@ function Landing() {
 
       <ContentContainer />
       <Cta />
+      <PetChatBot/>
       <Testimonial />
       <VideoSection />
       <ChatUs/>
