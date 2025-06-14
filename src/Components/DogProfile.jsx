@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 const DogProfile = () => {
   const [dog, setDog] = useState(null);
-
+const API_URL = process.env.REACT_APP_API_URL 
   useEffect(() => {
     const fetchDog = async () => {
       const token = localStorage.getItem('access'); // or wherever your JWT is stored
 
       try {
-        const res = await fetch('https://bharbhoxbackend-production.up.railway.app/api/dog/profile/', {
+        const res = await fetch('${API_URL}/api/dog/profile/', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();

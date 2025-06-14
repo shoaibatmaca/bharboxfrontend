@@ -32,7 +32,8 @@ const { billingType, selectedPlan, email: passedEmail } = location.state || {};
   };
 
   const selected = planDetails[selectedPlan] || {};
-  const API_URL = process.env.REACT_APP_API_URL || 'https://bharbhoxbackend-production.up.railway.app';
+  const API_URL = process.env.REACT_APP_API_URL 
+  // || 'https://bharbhoxbackend-production.up.railway.app';
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;

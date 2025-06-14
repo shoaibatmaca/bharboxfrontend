@@ -6,12 +6,14 @@ import DogProfile from '../Components/DogProfile';
 import VetChat from '../Components/VetChat';
 import "../styles/dashboard.css";
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://bharbhoxbackend-production.up.railway.app';
+const API_URL = process.env.REACT_APP_API_URL 
+// || 'https://bharbhoxbackend-production.up.railway.app';
 
 const BarkBoxDashboard = () => {
   const [activeTab, setActiveTab] = useState('subscription');
   const [subscription, setSubscription] = useState(null);
-  const [dogName, setDogName] = useState<string | null>(null);
+  const [dogName, setDogName] = useState(null);
+
 
 
   useEffect(() => {
@@ -97,42 +99,6 @@ fetchDogProfile();
             </div>
           </div>
 
-          {/* Next Box Preview */}
-          {/* <div className="col-lg-6 mb-4">
-            <div className="card h-100">
-              <div className="card-body animate-right">
-                <h5 className="card-title mb-3">Next Box Preview</h5>
-                <p className="text-muted mb-3">
-                  {subscription ? `${subscription.box_month_name} ${subscription.box_year} - "${subscription.box_theme}"` : "Loading..."}
-                </p>
-
-                <div className="box-preview-image mb-3">
-                  {subscription?.box_image ? (
-                    <img src={subscription.box_image} alt="Next Box" className="img-fluid" />
-                  ) : (
-                    <div className="preview-placeholder">
-                      <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
-                    </div>
-                  )}
-                </div>
-
-                <div className="box-contents">
-                  <div className="content-item">
-                    <i className="bi bi-box text-primary"></i>
-                    <span>2 Adventure-themed toys</span>
-                  </div>
-                  <div className="content-item">
-                    <i className="bi bi-heart text-danger"></i>
-                    <span>2 All-natural treat bags</span>
-                  </div>
-                  <div className="content-item">
-                    <i className="bi bi-truck text-success"></i>
-                    <span>Ships {subscription?.ship_date}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
           {/* Next Box Preview */}
 <div className="col-lg-6 mb-4">
   <div className="card h-100">
