@@ -3,8 +3,10 @@ import barkboxLogo from "../assets/barkbox-logo.svg";
 import Account from '../Components/Account';
 import Boxes from '../Components/Boxes';
 import DogProfile from '../Components/DogProfile';
+import PetChatBot from "../Components/PetChatBot";
 import VetChat from '../Components/VetChat';
 import "../styles/dashboard.css";
+
 
 const API_URL = process.env.REACT_APP_API_URL 
 // || 'https://bharbhoxbackend-production.up.railway.app';
@@ -13,6 +15,8 @@ const BarkBoxDashboard = () => {
   const [activeTab, setActiveTab] = useState('subscription');
   const [subscription, setSubscription] = useState(null);
   const [dogName, setDogName] = useState(null);
+  const [showChat, setShowChat] = useState(false);
+
 
 
 
@@ -159,10 +163,12 @@ fetchDogProfile();
               </div>
             </div>
             <div className="col-auto">
-              <button className="btn btn-outline-secondary btn-sm">
+              {/* <button className="btn btn-outline-secondary btn-sm">
                 <i className="bi bi-question-circle me-1"></i>
                 Get help
-              </button>
+              </button> */}
+              <button className="btn btn-outline-secondary btn-sm" onClick={() => setShowChat(true)}></button>
+
             </div>
           </div>
         </div>
@@ -233,7 +239,11 @@ fetchDogProfile();
         <div className="tab-content">
           {renderTabContent()}
         </div>
+
       </div>
+
+{showChat && <PetChatBot onClose={() => setShowChat(false)} />}
+
     </div>
   );
 };
