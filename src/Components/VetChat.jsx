@@ -19,9 +19,22 @@ const VetChat = () => {
   return (
     <div className="vet-chat-container">
       {/* Left Panel - Available Services */}
+      <div className="services-panel animate-bottom">
+        
+        
+        
+
+        <button className="start-consultation-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+            <polyline points="12,6 12,12 16,14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          Start Consultation
+        </button>
+      </div>
 
       {/* Right Panel - Chat Interface */}
-      {/* <div className="chat-panel animate-right"> */}
+      <div className="chat-panel animate-right">
         {/* Chat Header */}
         <div className="chat-header">
           <div className="vet-info">
@@ -60,7 +73,7 @@ const VetChat = () => {
             </svg>
           </button>
         </div>
-      {/* </div> */}
+      </div>
     </div>
   );
 };
