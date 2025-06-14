@@ -112,22 +112,11 @@ fetchDogProfile();
           <p className="text-muted mb-3">
             {subscription.next_box.month_name} {subscription.next_box.year} - "{subscription.next_box.theme}"
           </p>
-<div className="box-preview-image mb-3">
-  {subscription.next_box?.image !== null ? (
-  <img
-    src={subscription.next_box.image}
-    alt="Next Box"
-    className="img-fluid rounded"
-    style={{ maxHeight: '180px', objectFit: 'cover', width: '100%' }}
-  />
-) : (
-  <div className="preview-placeholder">
-    <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
-  </div>
-)}
-
-</div>
-
+          <div className="box-preview-image mb-3">
+            <div className="preview-placeholder">
+              <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
+            </div>
+          </div>
 
           <div className="box-contents">
             <div className="content-item">
@@ -136,7 +125,7 @@ fetchDogProfile();
             </div>
             <div className="content-item">
               <i className="bi bi-heart text-danger"></i>
-              <span>3 All-natural treat bags</span>
+              <span>2 All-natural treat bags</span>
             </div>
             <div className="content-item">
               <i className="bi bi-truck text-success"></i>
@@ -177,7 +166,6 @@ fetchDogProfile();
                 <i className="bi bi-question-circle me-1"></i>
                 Get help
               </button>
-              
             </div>
           </div>
         </div>
