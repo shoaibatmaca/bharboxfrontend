@@ -11,6 +11,8 @@ const API_URL = process.env.REACT_APP_API_URL || 'https://bharbhoxbackend-produc
 const BarkBoxDashboard = () => {
   const [activeTab, setActiveTab] = useState('subscription');
   const [subscription, setSubscription] = useState(null);
+  const [dogName, setDogName] = useState<string | null>(null);
+
 
   useEffect(() => {
     const fetchSubscription = async () => {
@@ -28,6 +30,24 @@ const BarkBoxDashboard = () => {
       }
     };
     fetchSubscription();
+
+    const fetchDogProfile = async () => {
+  const token = localStorage.getItem('access');
+  try {
+    const res = await fetch(`${API_URL}/api/dog/profile/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await res.json();
+    setDogName(data.name);  // 'name' from Dog model
+  } catch (error) {
+    console.error('Failed to load dog profile', error);
+  }
+};
+
+fetchDogProfile();
+
   }, []);
 
   const renderTabContent = () => {
@@ -188,14 +208,14 @@ const BarkBoxDashboard = () => {
           <p className="welcome-subtitle">Manage Buddy's subscription and see what's coming next</p>
         
         </div> */}
-        <div className="welcome-section mb-4">
-  <h1 className="theme-title">
-    Welcome back{subscription?.dog_name ? `, ${subscription.dog_name}` : ''}! 🐕
-  </h1>
-  <p className="welcome-subtitle">
-    Manage {subscription?.dog_name || "your buddy"}'s subscription and see what's coming next
-  </p>
-</div>
+
+          <h1 className="theme-title">
+  Welcome back{dogName ? `, ${dogName}` : ''}! 🐕
+</h1>
+<p className="welcome-subtitle">
+  Manage {dogName || "your buddy"}'s subscription and see what's coming next
+</p>
+
 
 
         {/* Stats Cards */}
@@ -210,14 +230,14 @@ const BarkBoxDashboard = () => {
           <div className="col-lg-3 col-md-6 mb-3">
             <div className="stat-card animate-bottom">
               <div className="stat-icon toys"><i className="bi bi-heart icon-bounce"></i></div>
-              <div className="stat-number">48</div>
+              <div className="stat-number">0</div>
               <div className="stat-label">Toys Loved</div>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 mb-3">
             <div className="stat-card animate-bottom">
               <div className="stat-icon treats"><i className="bi bi-gift icon-bounce"></i></div>
-              <div className="stat-number">24</div>
+              <div className="stat-number">0</div>
               <div className="stat-label">Treats Enjoyed</div>
             </div>
           </div>
