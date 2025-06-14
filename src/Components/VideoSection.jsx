@@ -11,7 +11,7 @@ function VideoSection() {
             state-of-the-art lab to ensure it meets the highest safety
             requirements.
           </p>
-          <button className="theme_btn">Get BhauBox</button>
+          <button className="theme_btn" href="/toy-selector">Get BhauBox</button>
 
           {/* embedded YouTube video */}
           <div className="mt-5">

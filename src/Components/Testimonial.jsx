@@ -212,7 +212,7 @@ function Testimonial() {
       </div>
 
       <div className="cta-area">
-        <button className="theme_btn">
+        <button className="theme_btn" href="/toy-selector">
           Get BhauBox
         </button>
       </div>

@@ -56,9 +56,9 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <a href="/get-BhauBox" className="mobile-menu-item d-md-none">Get BhauBox</a>      
+          <a href="/toy-selector" className="mobile-menu-item d-md-none">Get BhauBox</a>      
           <a href="/gifts" className="mobile-menu-item">Gifts</a>
-          <a className="mobile-menu-item" href="/help">
+          <a className="mobile-menu-item" href="/petchat">
             Get help <i className="bi bi-chat-dots-fill chat-icon"></i>
           </a>
           <a href="/login" className="mobile-menu-item">Login</a>

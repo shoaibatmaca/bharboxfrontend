@@ -5,8 +5,7 @@ const DogProfile = () => {
 const API_URL = process.env.REACT_APP_API_URL 
   useEffect(() => {
     const fetchDog = async () => {
-      const token = localStorage.getItem('access'); // or wherever your JWT is stored
-
+      const token = localStorage.getItem('access');
       try {
         const res = await fetch(`${API_URL}/api/dog/profile/`, {
           headers: { Authorization: `Bearer ${token}` }
@@ -83,14 +82,6 @@ const API_URL = process.env.REACT_APP_API_URL
           <div className="preference-item">
             <span className="preference-label">Toy Type:</span>
             <span className="preference-value">Plush Toys</span>
-          </div>
-          <div className="preference-item">
-            <span className="preference-label">Activity Level:</span>
-            <span className="preference-value">High Energy</span>
-          </div>
-          <div className="preference-item">
-            <span className="preference-label">Chew Strength:</span>
-            <span className="preference-value">Moderate</span>
           </div>
         </div>
 
