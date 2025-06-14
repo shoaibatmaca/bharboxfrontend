@@ -3,7 +3,6 @@ import barkboxLogo from "../assets/barkbox-logo.svg";
 import Account from '../Components/Account';
 import Boxes from '../Components/Boxes';
 import DogProfile from '../Components/DogProfile';
-import PetChatBot from "../Components/PetChatBot";
 import VetChat from '../Components/VetChat';
 import "../styles/dashboard.css";
 
@@ -113,11 +112,22 @@ fetchDogProfile();
           <p className="text-muted mb-3">
             {subscription.next_box.month_name} {subscription.next_box.year} - "{subscription.next_box.theme}"
           </p>
-          <div className="box-preview-image mb-3">
-            <div className="preview-placeholder">
-              <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
-            </div>
-          </div>
+<div className="box-preview-image mb-3">
+  {subscription.next_box?.image !== null ? (
+  <img
+    src={subscription.next_box.image}
+    alt="Next Box"
+    className="img-fluid rounded"
+    style={{ maxHeight: '180px', objectFit: 'cover', width: '100%' }}
+  />
+) : (
+  <div className="preview-placeholder">
+    <i className="bi bi-image" style={{ fontSize: '3rem', color: '#ddd' }}></i>
+  </div>
+)}
+
+</div>
+
 
           <div className="box-contents">
             <div className="content-item">
@@ -126,7 +136,7 @@ fetchDogProfile();
             </div>
             <div className="content-item">
               <i className="bi bi-heart text-danger"></i>
-              <span>2 All-natural treat bags</span>
+              <span>3 All-natural treat bags</span>
             </div>
             <div className="content-item">
               <i className="bi bi-truck text-success"></i>
@@ -163,12 +173,11 @@ fetchDogProfile();
               </div>
             </div>
             <div className="col-auto">
-              {/* <button className="btn btn-outline-secondary btn-sm">
+              <button className="btn btn-outline-secondary btn-sm">
                 <i className="bi bi-question-circle me-1"></i>
                 Get help
-              </button> */}
-              <button className="btn btn-outline-secondary btn-sm" onClick={() => setShowChat(true)}></button>
-
+              </button>
+              
             </div>
           </div>
         </div>
@@ -239,11 +248,7 @@ fetchDogProfile();
         <div className="tab-content">
           {renderTabContent()}
         </div>
-
       </div>
-
-{showChat && <PetChatBot onClose={() => setShowChat(false)} />}
-
     </div>
   );
 };
